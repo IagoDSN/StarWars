@@ -1,5 +1,5 @@
 # Siga todos os passos a seguir para conseguir executar corretamente:
-#### obs:(Garanta que o GitHub esteja em inglês, pois os nomes dos arquivos podem variar.)
+#### obs:(Garanta que o GitHub esteja em inglês, pois os nomes dos arquivos podem variar e baixe todos os arquivos corretamente.)
 
 ### Primeiramente pegue os três arquivos: frist-files, personagens e persoanes e arraste para a pasta StarWarsCharacters.
 ### Em seguida extraia os arquivos na opção "extrair aqui" nas três pastas.
