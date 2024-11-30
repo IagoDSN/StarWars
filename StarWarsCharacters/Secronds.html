@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Characters</title>
+    <link rel="icon" href="personagens/StormCapa.png" type="image/x-icon">
+<!--Vá para linha 567 -->
+    <style>
+        body{
+            background-color: darkblue;
+        }
+        .quadrado{
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid black;
+            height: 1110px;
+            width: 1100px;
+            position: absolute;
+            top: 400px;
+            left: 300px;
+        }
+        .retangulo{
+            background-color: darkcyan ;
+            border-radius: 15px;
+            border: 3px solid black;
+            height: 1100px;
+            width: 295px;
+            position: absolute;
+            top: 400px;
+            left: 5px;
+        }
+        .fundo{
+            background-color: darkblue; 
+            height: 300px;
+            width: 1400px;
+            position: absolute;
+            top: 1510px;
+            left: 0px;
+        }
+        .img{
+            position: absolute;
+            transition: 0.8s;
+        }
+        .img:hover{
+            transform: scale(1.1);
+        }
+        .img1{
+            cursor: pointer;
+            height: 150px;
+            width: 150px;
+            top: 250px;
+            left: 635px;
+        }
+        .img2{
+            height: 70px;
+            width: 140px;
+            top: 10px;
+            left: 635px;
+        }
+        .img3{
+            height: 70px;
+            width: 70px;
+            top: 325px;
+            left: 1330px;
+        }
+        .img4{
+            height: 70px;
+            width: 80px;
+            top: 320px;
+            left: 10px;
+        }
+        .img5{
+            height: 70px;
+            width: 70px;
+            top: 10px;
+            left: 10px;
+        }
+        .img6{
+            height: 70px;
+            width: 70px;
+            top: 10px;
+            left: 1330px;
+        }
+        .img7{
+            height: 70px;
+            width: 70px;
+            top: 1520px;
+            left: 650px;
+        }
+        .imgobi{
+            height: 550px;
+            width: 300px;
+        }
+        .texto1{
+            position: absolute;
+            top: 130px;
+            left: 455px;
+            color: rgb(252, 216, 11);
+        }
+        .texto2{
+            font-size: 20px;
+            position: absolute;
+            top: 410px;
+            left: 25px;
+            color: rgb(252, 216, 11);
+        }  
+        .btnper{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: transparent;
+            border: solid white;
+            color: rgb(255, 255, 255); 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 16px 40px;
+            text-align: center; 
+            margin: 4px 2px; 
+            cursor: pointer;
+            border-radius: 14px;
+            transition:  0.6s;
+        }
+        .btnper1{
+        position: absolute;
+        top: 460px;
+        left: 50px;
+        }
+        .btnper2{
+        position: absolute;
+        top: 530px;
+        left: 50px;
+        }
+        .btnper3{
+        position: absolute;
+        top: 600px;
+        left: 50px;
+        }
+        .btnper4{
+        position: absolute;
+        top: 670px;
+        left: 50px;
+        }
+        .btnper5{
+        position: absolute;
+        top: 740px;
+        left: 50px;
+        }
+        .btnper6{
+        position: absolute;
+        top: 810px;
+        left: 50px;
+        }
+        .btnper7{
+        position: absolute;
+        top: 880px;
+        left: 50px;
+        }
+        .btnper8{
+        position: absolute;
+        top: 950px;
+        left: 50px;
+        }
+        .btnper9{
+        position: absolute;
+        top: 1020px;
+        left: 50px;
+        }
+        .btnper10{
+        position: absolute;
+        top: 1090px;
+        left: 50px;
+        }
+        .btnper11{
+        position: absolute;
+        top: 1160px;
+        left: 50px;
+        }
+        .btnper12{
+        position: absolute;
+        top: 1230px;
+        left: 50px;
+        }
+        .btnper13{
+        position: absolute;
+        top: 1300px;
+        left: 50px;
+        }
+        .btnper14{
+        position: absolute;
+        top: 1370px;
+        left: 50px;
+        }
+        .btnper15{
+        position: absolute;
+        top: 1440px;
+        left: 50px;
+        }
+        .btnper:hover{
+            background-color: rgb(247, 20, 4);
+            transform: scale(1.1);
+        }
+        .escrito{
+            font-size: 15px;
+            background-color: rgb(255, 217, 0);
+            border: transparent;
+            color: rgb(0, 0, 0); 
+            padding: 12px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 4px; 
+            cursor: pointer;
+            border-radius: 18px;
+            transition:  0.8s;
+            position: absolute;
+            top: 100px;
+            left: 650px;
+            height: 5px;
+            width: 80px;
+        }
+        .escrito:hover{
+            transform: scale(1.3);
+        }
+        .chao{
+            background-color: white;
+            border-radius: 0px;
+            border: 1px solid black;
+            height: 12px;
+            width: 1421px;
+            position: absolute;
+            top: 1850px;
+            left: 0px;
+        }
+        .escrito3{
+            font-size: 32px;
+            background-color: rgb(255, 217, 0);
+            border: transparent;
+            color: rgb(0, 0, 0); 
+            padding: 12px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 4px; 
+            cursor: pointer;
+            border-radius: 360px;
+            transition:  0.8s;
+            position: absolute;
+            top: 1630px;
+            left: 500px;
+            height: 100px;
+            width: 380px;
+        }
+        .escrito3:hover{
+            transform: scale(1.3);
+            color: rgb(0, 174, 255);
+            border: solid black;
+        }
+        .atatimg{
+            height: 150px;
+            width: auto;
+            position: absolute;
+            top: 1705px;
+            left: 1100px;
+            transition: 0.8s;
+        }
+        .atatimg:hover{
+            transform: scale(1.1);
+        }
+        .xwing{
+            height: 100px;
+            width: auto;
+            position: absolute;
+            top: 1650px;
+            left: 100px;
+            transition: 0.8s;
+        }
+        .xwing:hover{
+            transform: scale(1.2);
+        }
+
+        .imagem, .texto {
+            position: absolute;
+            transition: 0.8s;
+        }
+        .imagem:hover{
+            transform: scale(1.1);
+        }
+
+        .texto {
+            font-size: 32px;
+        }
+        img.aumentar {
+            transition: 0.8s;
+            position: absolute;
+            left: 530px;
+            top: 210px;
+            width: 350px; 
+            height: 250px;
+            }
+            #quardado{
+         position: fixed;
+          top: 50%;
+           left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 600px;
+            background-color: rgb(105, 103, 103);
+            border: 3px solid #000000;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px; 
+            display: none;
+        }
+            #btnfechar{
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            position: fixed;
+                top: 9%;
+                left: 65%;
+            width: 38px;
+            height: 38px;
+            border: 4px solid #000000;
+            background-color: rgb(228, 146, 25);
+            transition: 0.8s;
+            display: none;
+            }
+            #btnfechar:hover{
+    background-color: red;
+    transform: scale(1.05);
+            }
+            .square{
+                cursor: pointer;
+                display: none;
+                transition: 0.8s;
+            }
+            .square:hover{
+                transform: scale(1.2);
+            }
+                #square1{
+                    width: 15px;
+                  height: 15px;
+                   margin: 10px; 
+                   border: 3px solid black;
+                   background-color: transparent;
+                position: fixed;
+                top: 50%;
+                left: 38%;
+                   } 
+                   #square2{
+                    width: 15px;
+                  height: 15px;
+                   margin: 10px; 
+                   border: 3px solid black;
+                   background-color: transparent;
+                    position: fixed;
+                    top: 50%;
+                left: 43%;
+                } 
+                #square3{
+                    width: 15px;
+                  height: 15px;
+                   margin: 10px; 
+                   border: 3px solid black;
+                   background-color: transparent;
+                    position: fixed;
+                    top: 50%;
+                left: 48%;
+                } 
+                #square4{
+                    width: 15px;
+                  height: 15px;
+                   margin: 10px; 
+                   border: 3px solid black;
+                   background-color: transparent;
+                    position: fixed;
+                    top: 50%;
+                left: 53%;
+                } 
+                #square5{
+                    width: 15px;
+                  height: 15px;
+                   margin: 10px; 
+                   border: 3px solid black;
+                   background-color: transparent;
+                    position: fixed;
+                    top: 50%;
+                left: 58%;
+                } 
+                #square1:hover{ 
+                background-color: rgb(243, 247, 7); 
+            }
+            #square2:hover{ 
+                background-color: rgb(243, 247, 7); 
+            }
+            #square3:hover{ 
+                background-color: rgb(243, 247, 7); 
+            }
+            #square4:hover{ 
+                background-color: rgb(243, 247, 7); 
+            }
+            #square5:hover{ 
+                background-color: rgb(243, 247, 7); 
+            }
+            #textin{
+                position: fixed;
+                top: 25%;
+                left: 43%;
+            font-size: 24px;
+            color: yellow;
+            background-color: mediumblue;
+            display: none;
+            }
+    </style>
+    <script>
+        function removerConteudo() {
+     var container = document.getElementById("conteudo-container");
+     while (container.firstChild) {
+     container.removeChild(container.firstChild); 
+    } 
+}
+
+        let pers = 0;
+        function botao1(){ //Darth Maul
+            pers = 1;
+            removerConteudo();
+var textos = [
+    {content: "Darth Maul", top: "460px", left: "670px"},
+    {content: "Darth Maul, conhecido por sua aparência intimidadora e habilidades em combate. Originário do planeta Dathomir, ele foi treinado como um Irmão da Noite antes de se tornar aprendiz de Darth Sidious. Maul é famoso por seu sabre de luz de duas lâminas e suas tatuagens faciais vermelhas e pretas.", top: "600px", left: "600px"},
+    {content: "Sua principal arma(Sabre de luz Sith duplo):", top: "890px", left: "820px"},
+    {content: "Planeta de Nascimento: Dathomir", top: "1290px", left: "350px"},
+    {content: "Descrição: Um planeta sombrio e misterioso no universo de Star Wars, conhecido por suas florestas densas e ambiente hostil. É o lar dos Zabraks, incluindo Darth Maul, e das Irmãs da Noite, um clã de poderosas feiticeiras que usam a magia do Lado Sombrio da Força.", top: "1360px", left: "350px"}
+];
+
+textos.forEach(function(texto) {
+    var div = document.createElement("div");
+    div.className = "texto";
+    div.style.top = texto.top; 
+    div.style.left = texto.left;
+    div.textContent = texto.content;
+    document.getElementById("conteudo-container").appendChild(div);
+});
+
+var imagens = [
+     {src: "persoanes/Maul.png", top: "570px", left: "270px", width: "400px", height: "300"},
+      {src: "persoanes/SabreDuplo.png", top: "950px", left: "950px", width: "250px", height: "auto"}
+     ];
+
+  imagens.forEach(function(imagem) {
+     var img = document.createElement("img");
+      img.src = imagem.src;
+       img.className = "imagem";
+        img.style.top = imagem.top;
+         img.style.left = imagem.left;
+          img.style.width = imagem.width;
+           img.style.height = imagem.height;
+            document.getElementById("conteudo-container").appendChild(img); 
+        });
+    }
+        function botao2(){ //StormTrooper
+            pers = 2;
+            removerConteudo();
+var textos = [
+    {content: "StormTrooper", top: "460px", left: "690px"},
+    {content: "Os Stormtroopers são soldados de elite do Império Galáctico no universo de Star Wars. Reconhecíveis por suas armaduras brancas, eles são responsáveis por manter a ordem e executar a vontade do Imperador. Originalmente derivados dos clones do Exército Clone, os Stormtroopers se tornaram símbolos do poder militar do Império.", top: "600px", left: "555px"},
+    {content: "Sua principal arma(Blaster E-11):", top: "890px", left: "850px"},
+    {content: "Planeta de Nascimento: Diversos", top: "1290px", left: "320px"},
+    {content: "O Império Galáctico e a Primeira Ordem recrutam soldados de várias espécies, mas predominantemente humanos. Esta preferência reflete os pontos de vista xenofóbicos do Império, que valoriza a uniformidade e a lealdade dos humanos.", top: "1360px", left: "320px"}
+];
+
+textos.forEach(function(texto) {
+    var div = document.createElement("div");
+    div.className = "texto";
+    div.style.top = texto.top; 
+    div.style.left = texto.left;
+    div.textContent = texto.content;
+    document.getElementById("conteudo-container").appendChild(div);
+});
+
+var imagens = [
+     {src: "persoanes/StormTrooper.png", top: "500px", left: "290px", width: "250px", height: "150"},
+      {src: "persoanes/E-11.png", top: "980px", left: "900px", width: "350px", height: "auto"}
+     ];
+
+  imagens.forEach(function(imagem) {
+     var img = document.createElement("img");
+      img.src = imagem.src;
+       img.className = "imagem";
+        img.style.top = imagem.top;
+         img.style.left = imagem.left;
+          img.style.width = imagem.width;
+           img.style.height = imagem.height;
+            document.getElementById("conteudo-container").appendChild(img); 
+        });
+        }
+        function botao3(){//Comandante Cody
+            pers = 3;
+            removerConteudo();
+var textos = [
+    {content: "Comandante Cody", top: "460px", left: "690px"},
+    {content: "Comandante Cody, cujo nome completo é CC-2224, é um personagem da franquia Star Wars. Ele é um soldado clone que lutou nas Guerras Clônicas ao lado do General Jedi Obi-Wan Kenobi", top: "600px", left: "555px"},
+    {content: "Sua principal arma(DC-15):", top: "890px", left: "850px"},
+    {content: "Planeta de Nascimento: Kamino", top: "1290px", left: "320px"},
+    {content: "Descrição: Kamino é um planeta oceânico conhecido por suas tempestades que acontecem constantemente e mares agitados. É famoso por ser o local onde os Clones do Exército da República foram criados. Os habitantes de Kamino, conhecidos como Kaminoanos, são especializados em clonagem e engenharia genética.", top: "1360px", left: "320px"}
+];
+
+textos.forEach(function(texto) {
+    var div = document.createElement("div");
+    div.className = "texto";
+    div.style.top = texto.top; 
+    div.style.left = texto.left;
+    div.textContent = texto.content;
+    document.getElementById("conteudo-container").appendChild(div);
+});
+
+var imagens = [
+     {src: "persoanes/Comandante.png", top: "650px", left: "290px", width: "272px", height: "375"},
+      {src: "persoanes/DC-15.png", top: "980px", left: "900px", width: "350px", height: "auto"}
+     ];
+
+  imagens.forEach(function(imagem) {
+     var img = document.createElement("img");
+      img.src = imagem.src;
+       img.className = "imagem";
+        img.style.top = imagem.top;
+         img.style.left = imagem.left;
+          img.style.width = imagem.width;
+           img.style.height = imagem.height;
+            document.getElementById("conteudo-container").appendChild(img); 
+        });
+        }
+        function botao4(){//Conde Dookan
+            pers = 4;
+            removerConteudo();
+var textos = [
+    {content: "Conde Dookan", top: "460px", left: "690px"},
+    {content: "O Conde Dookan, também conhecido como Darth Tyranus, é um personagem central na franquia Star Wars, particularmente na trilogia prequela. Ele desempenha um papel crucial na saga ao se tornar um dos principais antagonistas que ajudam a iniciar as Guerras Clônicas e a queda da República.", top: "600px", left: "555px"},
+    {content: "Sua principal arma(Sabre de luz Sith):", top: "890px", left: "850px"},
+    {content: "Planeta de Nascimento: Serenno", top: "1290px", left: "320px"},
+    {content: "Serenno é conhecido por seu clima temperado e diversas paisagens naturais. O planeta possui florestas densas, montanhas majestosas e vastas planícies. Essas características tornam Serenno um lugar visualmente impressionante e agradável para viver.", top: "1360px", left: "320px"}
+            //Troque os textos para qual você desejar 'Basta apagar e escrever novamente'
+];
+
+textos.forEach(function(texto) {
+    var div = document.createElement("div");
+    div.className = "texto";
+    div.style.top = texto.top; 
+    div.style.left = texto.left;
+    div.textContent = texto.content;
+    document.getElementById("conteudo-container").appendChild(div);
+});
+
+var imagens = [
+     {src: "persoanes/conde.png", top: "680px", left: "240px", width: "352px", height: "975"}, //Nas funções a seguir alter o "src" da imagem para qual você deseja
+      {src: "personagens/sabreVermelho.png", top: "980px", left: "900px", width: "350px", height: "auto"}
+     ];
+
+  imagens.forEach(function(imagem) {
+     var img = document.createElement("img");
+      img.src = imagem.src;
+       img.className = "imagem";
+        img.style.top = imagem.top;
+         img.style.left = imagem.left;
+          img.style.width = imagem.width;
+           img.style.height = imagem.height;
+            document.getElementById("conteudo-container").appendChild(img); 
+        });
+        }
+        function botao5(){//Basta copiar a função anterior e colar aqui, em seguida mude o local da imagem e coloque a sua escolha, Width é a largura e height a altura. Você também pode mudar a posção alterando os valores de top e left
+            pers = 5;
+        }
+        function botao6(){
+            pers = 6;
+        }
+        function botao7(){
+            pers = 7;
+        }
+        function botao8(){
+            pers = 8;
+        }
+        function botao9(){
+            pers = 9;
+        }
+        function botao10(){
+            pers = 10;
+        }
+        function botao11(){
+            pers = 11;
+        }
+        function botao12(){
+            pers = 12;
+        }
+        function botao13(){
+            pers = 13;
+        }
+        function botao14(){
+            pers = 14;
+        }
+        function botao15(){
+            pers = 15;
+        }
+        function trocarImagem() {
+         var imagem = document.getElementById("imagem");
+          var imagemOriginal = "personagens/darthvader.png";
+           var gif = "personagens/luta.gif";
+          imagem.src = gif;
+          imagem.classList.add("aumentar");
+        setTimeout(function() {
+             imagem.src = imagemOriginal;
+             imagem.classList.remove("aumentar");
+             }, 3000);
+         }
+         function avaliar() {
+             document.getElementById('quardado').style.display = 'flex'
+              document.getElementById('btnfechar').style.display = 'flex'
+              document.getElementById('textin').style.display = 'flex'
+              var squares = document.querySelectorAll('.square');
+            squares.forEach(function(square) {
+                 square.style.display = 'flex';
+            });
+         }  
+         function fechar() {
+            document.getElementById('quardado').style.display = 'none'
+            document.getElementById('btnfechar').style.display = 'none'
+            document.getElementById('textin').style.display = 'none'
+            var squares = document.querySelectorAll('.square');
+            squares.forEach(function(square) {
+                 square.style.display = 'none';
+            });
+         }
+    </script>
+</head>
+<body>
+    <img src="personagens/logo.png" alt="logo" class="img img2">
+
+    <h1 class="texto1">Os principais personagens de Star Wars.</h1>
+
+    <div class="escrito">🛸StarWars</div>
+
+    <img src="personagens/Rebeldes.png" alt="rebeldes" class="img img3">
+    <img src="personagens/imperio.png" alt="império" class="img img4">
+    <img src="personagens/JediL.png" alt="império" class="img img5">
+    <img src="personagens/Separatistas.png" alt="império" class="img img6">
+
+    <div class="fundo"></div>
+    <div class="quadrado"></div>
+    <div class="retangulo"></div> 
+
+    <h2 class="texto2">Personagens mais conhecidos:</h2>
+
+    <button class="btnper btnper1" onclick="botao1()">Darth Maul</button>
+    <button class="btnper btnper2" onclick="botao2()">StormTrooper</button>
+    <button class="btnper btnper3" onclick="botao3()">Comandante Cody</button>
+    <button class="btnper btnper4" onclick="botao4()">Conde Dookan</button>
+    <button class="btnper btnper5" onclick="botao5()">Escolha um Personagem</button>  <!-- Volte para linha 567 e siga os passos -->
+    <button class="btnper btnper6" onclick="botao6()">Escolha um Personagem</button>
+    <button class="btnper btnper7" onclick="botao7()">Escolha um Personagem</button>
+    <button class="btnper btnper8" onclick="botao8()">Escolha um Personagem</button>
+    <button class="btnper btnper9" onclick="botao9()">Escolha um Personagem</button>
+    <button class="btnper btnper10" onclick="botao10()">Escolha um Personagem</button>
+    <button class="btnper btnper11" onclick="botao11()">Escolha um Personagem</button>
+    <button class="btnper btnper12" onclick="botao12()">Escolha um Personagem</button>
+    <button class="btnper btnper13" onclick="botao13()">Escolha um Personagem</button>
+    <button class="btnper btnper14" onclick="botao14()">Escolha um Personagem</button>
+    <button class="btnper btnper15" onclick="botao15()">Escolha um Personagem</button>
+
+    <div class="container" id="conteudo-container"></div>
+
+    <img id="imagem" src="personagens/darthvader.png" alt="darth" onclick="trocarImagem()" class="img img1">
+
+    <button class="escrito3" onclick="avaliar()">Avaliar</button>
+    <div class="chao"></div>
+    <img src="personagens/at-at.png" alt="AT-AT" class="atatimg">
+    <img src="personagens/X-wing.png" alt="X-wing" class="xwing">
+    <img src="personagens/StormCapa.png" alt="CapaceteStormTrooper" class="img img7">
+    
+    <div id="quardado" class="square"></div>
+    <div id="square1" class="square"onclick="fechar()">1</div>
+     <div id="square2" class="square"onclick="fechar()">2</div>
+      <div id="square3" class="square"onclick="fechar()">3</div>
+       <div id="square4" class="square"onclick="fechar()">4</div>
+        <div id="square5" class="square" onclick="fechar()">5</div>
+        <div id="textin">Deixe sua avaliação!</div>
+
+    <button id="btnfechar" onclick="fechar()">X</button>
+</body>
+</html>
