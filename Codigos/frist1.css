@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-image: url('https://img.freepik.com/vetores-premium/fundo-de-espaco-com-estrelas-ilustracao-vetorial_97886-319.jpg');
+}
+.btn{
+    background-color: lightcoral;
+    border: transparent;
+    color: rgb(255, 255, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 32px;
+    text-align: center; 
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 20px;
+    transition:  0.6s;
+}
+.btn1{
+    font-size: 32px;
+    position: absolute;
+    top: 410px;
+    left: 597px;
+    height: 70px;
+    width: 220px;
+}
+.btn2{
+    font-size: 20px;
+    position: absolute;
+    top: 970px;
+    left: 1250px;
+    height: 40px;
+    width: 150px;
+}
+button:hover{
+    background-color: lightblue;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    
+}
+.img{
+     border-radius: 10px;
+}
+.img1{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+     top: 208px;
+     left: 612px;
+     cursor: pointer;
+}
+.img2{
+    height: 200px;
+    width: 400px;
+    position: absolute;
+     top: 700px;
+     left: 412px;
+     cursor: pointer;
+}
+.img3{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+     top: 308px;
+     left: 112px;
+     cursor: pointer;
+}
+.img4{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 460px;
+    left: 1000px;  
+    cursor: pointer;
+}
